@@ -1,0 +1,12 @@
+function CalculateRemaining(ms) {
+    var second = ms / 1000;
+    if (second <= 60)
+        return parseInt(second) + " sec.";
+    else if (second / 60 <= 60)
+        return parseInt(second / 60) + " min. " +
+            (second % 60 == 0 ? "" : parseInt(second % 60) + " sec.");
+    else
+        return parseInt(second / 60 / 60) + " hr, " +
+            ((second / 60) % 60 == 0 ? "" : parseInt((second / 60) % 60) + " min. ") +
+            (second % 60 == 0 ? "" : parseInt(second % 60) + " sec.");
+}
