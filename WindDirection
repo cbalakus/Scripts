@@ -1,22 +1,22 @@
-   function GetDir(deg) {
-            if (deg > 360)
-                deg = deg % 360
-            if (deg >= 292 && deg < 337)
-                return "Kuzey Batı";
-            else if (deg >= 247 && deg < 292)
-                return "Batı";
-            else if (deg >= 202 && deg < 247)
-                return "Güney Batı";
-            else if (deg >= 158 && deg < 202)
-                return "Güney";
-            else if (deg >= 112 && deg < 158)
-                return "Güney Doğu";
-            else if (deg >= 68 && deg < 112)
-                return "Doğu";
-            else if (deg >= 23 && deg < 68)
-                return "Kuzey Doğu";
-            else if (deg >= 337 || deg <= 22)
-                return "Kuzey"
-            else
-                return "Bilinmiyor";
-        }
+function GetDir(deg) {
+    if (deg > 360)
+        deg = deg % 360
+    if (deg >= 292 && deg < 337)
+        return "northwest";
+    else if (deg >= 247 && deg < 292)
+        return "west";
+    else if (deg >= 202 && deg < 247)
+        return "southwest";
+    else if (deg >= 158 && deg < 202)
+        return "south";
+    else if (deg >= 112 && deg < 158)
+        return "southeast";
+    else if (deg >= 68 && deg < 112)
+        return "east";
+    else if (deg >= 23 && deg < 68)
+        return "northeast";
+    else if (deg >= 337 || deg <= 22)
+        return "north"
+    else
+        return "unknown";
+}
