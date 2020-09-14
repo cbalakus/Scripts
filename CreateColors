@@ -1,0 +1,6 @@
+function createColors(length) {
+    var retVal = [];
+    for (var i = 0; i < length; i++)
+        retVal.push(["hsla(", ((360 / length) * i).toFixed(0), ",100%,50%,1)"].join(""));
+    return retVal;
+}
